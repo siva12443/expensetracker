@@ -14,6 +14,7 @@ export default function Login() {
                 <InputText id="username" value={value} onChange={(e) => setValue(e.target.value)} />
                 <label htmlFor="username">Username</label>
             </FloatLabel>
+            
             </form>
         </div>
     )
