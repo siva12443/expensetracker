@@ -91,11 +91,13 @@ function Home() {
         };
       
     return (
-        <div className="outerdiv">
-                <form onSubmit={handleSubmit}>
-            <input type="datetime-local" value={transactionDate} onChange={(e) => setTransactionDate(e.target.value)} />
-            <input type="number" placeholder="Amount in Rs." value={amount} onChange={e => setAmount(e.target.value)}/>
-            <select value={transactionType} onChange={(e) => {setTransactionType(e.target.value)}}>
+      <div className="flex items-center justify-center min-h-screen bg-gray-100 font-nunito">
+        <div className="flex w-full max-w-4xl p-6 space-x-6">
+          <form className="bg-white p-6 rounded shadow-md size-3/4" onSubmit={handleSubmit}>
+            <label className="font-bold text-green-500 text-xl">Add Transaction</label>
+            <input type="datetime-local" className="min-h-12 mt-2" value={transactionDate} onChange={(e) => setTransactionDate(e.target.value)} />
+            <input type="number" required className="min-h-12" placeholder="Amount in Rs." value={amount} onChange={e => setAmount(e.target.value)}/>
+            <select value={transactionType} className="h-12 " onChange={(e) => {setTransactionType(e.target.value)}}>
                 <option>Income</option>
                 <option>Expense</option>
                 {/* <option>Transfer</option> This should come when there is a bank account option added*/}
@@ -115,6 +117,7 @@ function Home() {
               <Link to="/budget">Budget</Link>
             </div>
             </form>
+        </div>
         </div>
     );
 }

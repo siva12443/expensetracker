@@ -4,6 +4,7 @@ import Home from './Pages/Home';
 import Transactions from './Pages/Transactions';
 import Budget from './Pages/Budget';
 import Login from './Pages/Login';
+import SignUp from './Pages/SignUp';
 
 function App() {
     
@@ -17,6 +18,10 @@ function App() {
                 <Route
                     path="/login"
                     element={<Login />}
+                />
+                <Route
+                    path="/signup"
+                    element={<SignUp />}
                 />
                 <Route
                     path='/transactions'
